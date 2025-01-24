@@ -49,7 +49,7 @@ export async function GET() {
             name: 'Pepperoni Passion Pizza',
             price: 650,
             image: 'https://cdn.create.vista.com/api/media/small/687598820/stock-photo-pizza-mushrooms-tomatoes',
-            description: 'Pizza sauce base, mozzarella cheese, black olives, and topping with onions and mushrooms.',
+            description: 'Pizza sauce base, mozzarella cheese, black olives, and topping with onions mushrooms.',
         },
         {
             id: 8,
@@ -58,6 +58,8 @@ export async function GET() {
             image: 'https://static.vecteezy.com/system/resources/thumbnails/027/807/857/small/appetizing-hawaiian-pizza-composed-with-ham-grilled-chicken-bacon-pineapple-green-peppers-onions-yellow-sauce-mozzarella-cheese-ricotta-grated-parmesan-as-toppings-photo.jpg',
             description: 'Pizza sauce base, mozzarella cheese, chicken chunks, and pineapples.',
         },
+
+
     ];
 
     return NextResponse.json(products);

@@ -77,12 +77,12 @@ const Menuitems = () => {
           backgroundPosition: 'center',  
         }}></div>
       <div className="relative z-10">
-        <div className="container mx-auto text-center mb-8">
+        <div className="container max-auto text-center mb-8">
           <h1 className='text-white text-5xl font-bold mb-6'>Our Pizza Menu</h1>
         </div>
-        <div className='w-full mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 justify-center gap-y-10 gap-x-3 mt-10 mb-5'>
+        <div className='w-fit max-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 justify-center gap-y-12 gap-x-9 mt-10'>
           {products.map((product) => (
-            <ProductCard
+            <ProductCard 
               key={product.id}
               id={product.id}
               name={product.name}
@@ -91,10 +91,11 @@ const Menuitems = () => {
               description={product.description}
               onAddToCard={addToCart}
               cart={cart}
+            
             />
           ))}
         </div>
-        <div className="max-w-6xl mx-auto mt-8">
+        <div className="max-w-6xl mx-auto justify-center items-center mt-12">
           <button
             onClick={toggleCart}
             className="bg-sky-700 text-white py-3 px-16 rounded-lg shadow-md hover:bg-sky-500 transition duration-300 ease-out transform">

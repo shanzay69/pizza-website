@@ -18,15 +18,15 @@ const ProductCard: React.FC<ProductCardprops> = ({
   const isInCart = cart.some(item => item.id === id);
 
   return (
-    <div className='w-80 bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl z-10 relative gap-3'>
+    <div className='w-[300px] h-[400px] bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl z-10 relative gap-5 mb-9'>
       <img
         src={image}
         alt={`Image of ${name} pizza`}
-        className='h-72 w-full object-cover rounded-t-xl mb-4'
+        className='w-full h-60 object-cover rounded-t-xl mb-2'
       />
       <h2 className='text-lg font-bold text-sky-700 truncate block capitalize mb-2'>{name}</h2>
       <p className='text-lg font-semibold text-black my-3 cursor-auto'>Rs: {price}</p>
-      <p className='text-sm text-gray-500 mb-4'>{description}</p>
+      <p className='text-sm text-gray-500 mb-5'>{description}</p>
       <button
         onClick={() => onAddToCard({ id, name, price, image, description })}
         disabled={isInCart}
